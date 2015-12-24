@@ -6,13 +6,15 @@
 
 <% else %>
 
-  <% @books.each do |book| %>
+  <div class="row">
 
-    <a href="/books/<%= book.id %>">
-      <!-- book_index is the size image, see book model for ref -->
-      <%= image_tag book.book_img.url(:book_index) %>
-    </a>
-
-  <% end %>
-
+    <% @books.each do |book| %>
+      <div class="col-md-3">
+        <a href="/books/<%= book.id %>">
+          <!-- book_index is the size image, see book model for ref -->
+          <%= image_tag book.book_img.url(:book_index), class: 'book' %>
+        </a>
+      </div>
+    <% end %>
+  </div>
 <% end %>
