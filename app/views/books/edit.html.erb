@@ -1,2 +1,10 @@
 <h1>Edit form</h1>
-<%= render 'form' %>
+
+<!-- html multipart it's for when adding imgs in paperclip -->
+<%= simple_form_for @book, :html => {:multipart => true} do |f|%>
+  <%= f.select :category_id, @categories %>
+  <%= f.input :title, label: "Book Title" %>
+  <%= f.input :description %>
+  <%= f.input :author %>
+  <%= f.button :submit %>
+<% end %>
