@@ -16,10 +16,12 @@
 <div class="row">
   <div class="col-md-4">
     <!-- this is where revies/ratings will go -->
+    <%= render @book.reviews %>
+    
     <div>
       <%= link_to "Add Review", new_book_review_path(@book) %>
     </div>
-    
+
   </div>
 </div>
 <%= link_to 'Back', root_path %>
