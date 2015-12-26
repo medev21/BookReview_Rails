@@ -1,0 +1,9 @@
+<!-- this is nested resource, so it's a bit different -->
+<!-- two parameters are being passed -->
+<!-- first param is finding the book and the second param
+is building a review for that book -->
+<%= simple_form_for(@book, @book.reviews.build) do |f|%>
+  <%= f.input :rating %>
+  <%= f.input :comment %>
+  <%= f.button :submit %>
+<% end %>
